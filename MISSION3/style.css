@@ -1,0 +1,60 @@
+/* Style de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Section des certificats */
+.certificats {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    align-items: center;
+}
+
+/* Style des boutons de lien */
+.exercice {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet au survol et au clic */
+.exercice:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.exercice:active {
+    background-color: #004494;
+    transform: translateY(1px);
+}

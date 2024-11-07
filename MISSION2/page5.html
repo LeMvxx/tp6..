@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="stylepage5.css">
+</head>
+<body>
+    <h1>PRESENTATION</h1> 
+    <h2>INSCRIPTION :</h2>
+    <div class="form-container">
+        <label>Nom :</label>
+        <input type="text" id="nom" size="40"><br>
+        <label>Prénom :</label>
+        <input type="text" id="prenom" size="40"><br>
+        <label>Adresse :</label>
+        <input type="text" id="adresse" size="40"><br>
+        <label>Date de naissance :</label>
+        <input type="date" id="date-naissance"><br>
+        <button class="btn submit" onclick="validerFormulaire()">Valider</button>
+        <button class="btn cancel" onclick="annulerFormulaire()">Annuler</button>
+    </div>
+    <p id="message-erreur" class="message-erreur"></p>
+    <script src="script.js"></script>
+</body>
+</html>
