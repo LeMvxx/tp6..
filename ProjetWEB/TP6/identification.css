@@ -1,0 +1,109 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #3a7bd5, #3a6073);
+    color: #333;
+}
+
+/* Conteneur de connexion */
+.login-container {
+    width: 350px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #444;
+    border-bottom: 3px solid #4a90e2;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 600;
+    color: #666;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #4a90e2;
+    box-shadow: 0px 0px 8px rgba(74, 144, 226, 0.3);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+button:first-of-type {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+button:first-of-type:hover {
+    background-color: #3a7bd5;
+    transform: translateY(-2px);
+}
+
+button:last-of-type {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+button:last-of-type:hover {
+    background-color: #ccc;
+    transform: translateY(-2px);
+}
+
+/* Style de la ligne de séparation */
+hr {
+    width: 60px;
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+    margin: 20px auto;
+}

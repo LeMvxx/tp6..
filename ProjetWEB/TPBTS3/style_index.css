@@ -1,0 +1,67 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+}
+
+/* Style pour le titre principal */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+/* Style général des liens */
+a.exercice {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+    background: #ff5722;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Effet au survol */
+a.exercice:hover {
+    background-color: #e64a19;
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Style pour le lien "Retour à l'accueil" */
+a[href="../index.html"] {
+    margin-top: 20px;
+    padding: 8px 15px;
+    font-size: 1em;
+    background: #4caf50;
+    border-radius: 5px;
+}
+
+a[href="../index.html"]:hover {
+    background-color: #43a047;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivité pour les petits écrans */
+@media (max-width: 600px) {
+    a.exercice {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture en Javascript</title>
+    <link rel="stylesheet" href="cssindex.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Facture en Javascript</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Article</th>
+                    <th>Prix</th>
+                    <th>Quantité</th>
+                    <th>Résultat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ligne pour l'article 1 -->
+                <tr>
+                    <td><input type="text" id="article1" placeholder="E1"></td>
+                    <td><input type="number" id="prix1" placeholder="0"></td>
+                    <td><input type="number" id="quantite1" placeholder="0"></td>
+                    <td><input type="text" id="resultat1" readonly></td>
+                </tr>
+                <!-- Ligne pour l'article 2 -->
+                <tr>
+                    <td><input type="text" id="article2" placeholder="E2"></td>
+                    <td><input type="number" id="prix2" placeholder="0"></td>
+                    <td><input type="number" id="quantite2" placeholder="0"></td>
+                    <td><input type="text" id="resultat2" readonly></td>
+                </tr>
+                <!-- Ligne pour l'article 3 -->
+                <tr>
+                    <td><input type="text" id="article3" placeholder="E3"></td>
+                    <td><input type="number" id="prix3" placeholder="0"></td>
+                    <td><input type="number" id="quantite3" placeholder="0"></td>
+                    <td><input type="text" id="resultat3" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Boutons -->
+        <div class="button-container">
+            <button onclick="calculer()">Résultat</button>
+            <button onclick="reinitialiser()">Réinitialiser</button>
+        </div>
+        
+        <!-- Affichage du total -->
+        <div class="total-container">
+            <label>Total :</label>
+            <input type="text" id="total" readonly>
+        </div>
+    </div>
+
+    <script src="jsindex.js"></script>
+</body>
+</html>

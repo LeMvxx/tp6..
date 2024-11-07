@@ -1,0 +1,108 @@
+/* Réinitialisation des marges et paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Styles pour les titres */
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #555;
+}
+
+/* Conteneur du formulaire */
+.form-container {
+    background-color: #fff;
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour les labels et les champs de saisie */
+.form-container label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 5px;
+    color: #444;
+}
+
+.form-container input[type="text"],
+.form-container input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="date"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Boutons */
+.btn {
+    width: 48%;
+    padding: 12px;
+    margin: 10px 1%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.cancel {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Effets de survol */
+.btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Message d'erreur */
+.message-erreur {
+    color: #f44336;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}

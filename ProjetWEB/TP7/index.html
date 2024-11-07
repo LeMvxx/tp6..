@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice JS</title>
+    <style>
+        /* Styles de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #e0e0e0;
+            color: #333;
+        }
+
+        /* Conteneur de calculatrice */
+        .calculator {
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        input[type="number"] {
+            width: 45%;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            width: 45px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button.operation {
+            background-color: #333;
+            color: #fff;
+        }
+
+        button.operation:hover {
+            background-color: #555;
+        }
+
+        .special-button {
+            width: 100px;
+            background-color: #4a90e2;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        .special-button:hover {
+            background-color: #3a7bd5;
+        }
+
+        .output-container {
+            margin-top: 20px;
+        }
+
+        .output {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 80%;
+            margin: 5px auto;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <h1>Calculatrice en JS</h1>
+    <input type="number" id="num1" placeholder="Nombre 1">
+    <input type="number" id="num2" placeholder="Nombre 2">
+
+    <div class="button-container">
+        <button class="operation" onclick="calculate('+')">+</button>
+        <button class="operation" onclick="calculate('-')">-</button>
+        <button class="operation" onclick="calculate('*')">×</button>
+        <button class="operation" onclick="calculate('/')">÷</button>
+    </div>
+
+    <button class="special-button" onclick="checkParity()">Parité</button>
+    <button class="special-button" onclick="permute()">Permute</button>
+
+    <div class="output-container">
+        <div id="result" class="output">Résultat</div>
+        <div id="parity" class="output">Parité</div>
+    </div>
+</div>
+
+<script>
+    function calculate(operation) {
+        const num1 = parseFloat(document.getElementById('num1').value);
+        const num2 = parseFloat(document.getElementById('num2').value);
+        let result;
+
+        if (isNaN(num1) || isNaN(num2)) {
+            document.getElementById('result').textContent = 'Veuillez entrer deux nombres';
+            return;
+        }
+
+        switch (operation) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                result = num2 !== 0 ? num1 / num2 : 'Division par zéro !';
+                break;
+            default:
+                result = 'Opération invalide';
+        }
+
+        document.getElementById('result').textContent = result;
+    }
+
+    function checkParity() {
+        const num1 = parseFloat(document.getElementById('num1').value);
+        const parity = num1 % 2 === 0 ? 'Pair' : 'Impair';
+        document.getElementById('parity').textContent = `Nombre 1 est ${parity}`;
+    }
+
+    function permute() {
+        const num1Field = document.getElementById('num1');
+        const num2Field = document.getElementById('num2');
+        const temp = num1Field.value;
+        num1Field.value = num2Field.value;
+        num2Field.value = temp;
+    }
+</script>
+
+</body>
+</html>
